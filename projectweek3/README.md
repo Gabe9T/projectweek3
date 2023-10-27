@@ -12,7 +12,7 @@
 
 ## Description
 
-_This application shows all the projects that have seen finished in class durring the first week. Gives links to each github page. Also has more info about me on the side._
+_This application takes inputted numbers and changes it to "Beep", "Boop", or "Won't you be my neighbor?"_
 
 ## Github Page Link
 
@@ -39,9 +39,6 @@ _The MIT License (MIT)_
 Copyright (c) _2023_ _Gabriel Tucker_
 
 ## Test
-
-
-
 
 Test: "It should return an array of numbers from 0 to the user's inputted number"
 Code: beepBoop(0);

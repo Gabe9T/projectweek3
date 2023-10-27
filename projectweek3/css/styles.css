@@ -1,0 +1,15 @@
+body{
+
+    color: rgb(0, 0, 0);
+    background-color: rgb(134, 132, 132)
+
+}
+/*add border and resize picture*/
+.pic{
+
+
+    width: 200px;
+    border: ridge 10px rgb(0, 0, 0);
+    float: right;
+}
+
