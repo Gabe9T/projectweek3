@@ -13,3 +13,9 @@ body{
     float: right;
 }
 
+/* Center title*/
+
+.center{
+
+    text-align: center;
+}
