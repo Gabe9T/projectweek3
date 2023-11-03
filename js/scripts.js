@@ -1,23 +1,26 @@
-
 // Business Logic
 function substitution(userInput) {
     const resultArray = [];
     for (let i = 0; i <= userInput; i++) {
         const numString = i.toString();
-        let lastDigit = numString.charAt(numString.length - 1);
+        let highPriority = '0';  
 
-        for (let j = numString.length - 0; j >= 0; j--) {
-            if (numString[j] === '3' || numString[j] === '2' || numString[j] === '1') {
-                lastDigit = numString[j];
-                break;
+        for (let j = numString.length - 1; j >= 0; j--) {
+            if (numString[j] === '3') {
+                highPriority = '3';
+                break;  
+            } else if (numString[j] === '2' && highPriority !== '3') {
+                highPriority = '2';
+            } else if (numString[j] === '1' && highPriority !== '3' && highPriority !== '2') {
+                highPriority = '1';
             }
         }
 
-        if (lastDigit === '3') {
+        if (highPriority === '3') {
             resultArray.push("Won't you be my neighbor?");
-        } else if (lastDigit === '2') {
+        } else if (highPriority === '2') {
             resultArray.push('Boop!');
-        } else if (lastDigit === '1') {
+        } else if (highPriority === '1') {
             resultArray.push('Beep!');
         } else {
             resultArray.push(i.toString());
@@ -25,6 +28,8 @@ function substitution(userInput) {
     }
     return resultArray;
 }
+
+
 
 // UI Logic
 function formHandler(event) {
@@ -37,6 +42,3 @@ function formHandler(event) {
 window.addEventListener("load", function () {
     document.querySelector("form").addEventListener("submit", formHandler);
 });
-
-
-
